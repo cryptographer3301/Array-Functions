@@ -1,6 +1,6 @@
 
 use Data::Dumper;
-# Dont confuse on Sub meaning its just a simple function, will discuss it later 
+
 # Array methods in Perl
 # Push - Pop - Shift - unshift - sort - wantarray - exists - grep - join 
 
@@ -42,6 +42,7 @@ sub geeks
 	return(wantarray() ? ("Geeks", "For", "Geeks") : 1);
 }
 
+
 # Calling the subroutine
 # in scalar and array context
 my $value = geeks();
@@ -79,3 +80,19 @@ my @value2 = geeks2(my $a, my $b);
 # Printing values in both the contexts
 print("Value when called in Scalar context: $value\n");
 print("Value when called in List Context: @value");
+
+# Sort 
+my @languages = ("Java", "C", "Perl", "Delphi");
+print Dumper(\@languages);
+
+my @languages = sort(@languages); #Initialize
+print Dumper(\@languages);
+
+$ [ = 3; # re-index the array from a given starting number .
+print Dumper(\@languages[6]);
+
+my @arr1 = (1..5);
+my @arr2 = (6..10);
+
+my @arr = (@arr1, @arr2);
+print "arr is \n", @arr;
